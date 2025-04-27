@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat FURIA CS2</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <h1>🔥 Chat Oficial - FURIA CS2 🔥</h1>
+        <div id="chat-box"></div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Digite um comando...">
+            <button id="send-button">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        function appendUserMessage(message) {
+            const chatBox = document.getElementById('chat-box');
+            chatBox.innerHTML += `<div class="user-message">Você: ${message}</div>`;
+        }
+
+        function appendBotMessage(message) {
+            const chatBox = document.getElementById('chat-box');
+            chatBox.innerHTML += `<div class="bot-message">FURIA: ${message}</div>`;
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function sendMessage(message) {
+            appendUserMessage(message);
+
+            fetch('/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                appendBotMessage(data.response);
+            })
+            .catch(error => {
+                appendBotMessage('Erro ao conectar com o servidor.');
+            });
+        }
+
+        function handleUserInput() {
+            const userInput = document.getElementById('user-input');
+            const message = userInput.value.trim();
+            if (message === '') return;
+            sendMessage(message);
+            userInput.value = '';
+        }
+
+        window.onload = function() {
+            // Manda /start automaticamente
+            fetch('/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: '/start' })
+            })
+            .then(response => response.json())
+            .then(data => {
+                appendBotMessage(data.response);
+            });
+        };
+
+        document.getElementById('send-button').addEventListener('click', handleUserInput);
+
+// Novo: Enter também envia
+document.getElementById('user-input').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        handleUserInput();
+    }
+});
+
+
+    </script>
+</body>
+</html>
