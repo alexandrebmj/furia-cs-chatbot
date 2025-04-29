@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Chat FURIA CS2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <div class="chat-container">
+        <img src="/static/furia-logo.png" alt="Logo FURIA" class="logo">
         <h1>🔥 Chat Oficial - FURIA CS2 🔥</h1>
         <div id="chat-box"></div>
         <div class="input-container">
@@ -20,12 +22,16 @@
             const chatBox = document.getElementById('chat-box');
             chatBox.innerHTML += `<div class="user-message">Você: ${message}</div>`;
         }
-
         function appendBotMessage(message) {
             const chatBox = document.getElementById('chat-box');
-            chatBox.innerHTML += `<div class="bot-message">FURIA: ${message}</div>`;
+            const botMsgDiv = document.createElement('div');
+            botMsgDiv.classList.add('bot-message');
+            botMsgDiv.innerHTML = `<strong>FURIA:</strong> ${message}`; // Aqui interpreta o HTML corretamente
+            chatBox.appendChild(botMsgDiv);
             chatBox.scrollTop = chatBox.scrollHeight;
-        }
+    }
+
+        
 
         function sendMessage(message) {
             appendUserMessage(message);
@@ -57,7 +63,7 @@
             fetch('/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: '/start' })
+                body: JSON.stringify({ message: '' })
             })
             .then(response => response.json())
             .then(data => {

@@ -47,7 +47,28 @@ body {
     display: block;
     margin: 0 auto 20px auto;
 }
+.players {
+    width: 80px;
+    display: flex;
+    margin: 0 3px;
+}
+.containes {
+    display: flex;
+    margin: 0 50px;
+}
 
+.container {
+    display: flex;
+}
+ 
+.item {
+    text-align: center;
+    margin: 0 2px; /* Espaçamento entre as imagens */
+  }
+  
+.item p {
+    margin-top: 1px; /* Espaçamento entre a imagem e a descrição */
+  }
 
 .chat-container {
     background-color: #1a1a1a;
@@ -87,6 +108,16 @@ h1 {
     margin-bottom: 5px;
 }
 
+.bot-message a:not(.link-chat) {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bot-message a:hover {
+    text-decoration: underline;
+}
+
 #user-input {
     width: 70%;
     padding: 10px;
@@ -96,6 +127,18 @@ h1 {
     background-color: #333;
     color: #fff;
 }
+
+.bot-message a.link-chat {
+    color: #FFD700; /* dourado */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+.bot-message a.link-chat:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
 
 button {
     padding: 10px;
