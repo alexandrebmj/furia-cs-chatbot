@@ -142,3 +142,35 @@ h1 {
     font-size: large;
     text-align: center;
 }
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .chat-container {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    #user-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .players {
+        width: 100%;
+        max-width: 300px;
+    }
+}

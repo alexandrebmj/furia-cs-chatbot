@@ -27,12 +27,12 @@ def responder_ao_usuario(mensagem):
     if 'iniciar' in mensagem or 'comando' in mensagem:
         return '''
         <b>📋 Comandos disponíveis:</b><br>
-        ➤ <b>agenda</b> → Ver os próximos jogo da FURIA<br>
-        ➤ <b>resultados</b> → Resultados dos últimos jogos<br>
-        ➤ <b>jogadores</b> → Ver elenco atualizado<br>
-        ➤ <b>uniforme</b> → Link do novo uniforme da FURIA<br>
-        ➤ <b>redes</b> → Redes sociais oficiais da FURIA<br>
-        ➤ <b>curiosidade</b> → Curiosidades sobre a FURIA
+        ➤ <b>Agenda</b> → Ver os próximos jogos da FURIA<br>
+        ➤ <b>Resultados</b> → Resultados dos últimos jogos<br>
+        ➤ <b>Jogadores</b> → Ver elenco atualizado<br>
+        ➤ <b>Uniforme</b> → Link do novo uniforme da FURIA<br>
+        ➤ <b>Redes</b> → Redes sociais oficiais da FURIA<br>
+        ➤ <b>Curiosidade</b> → Curiosidades sobre a FURIA
         '''
 
     elif 'proximo' in mensagem or 'próximo' in mensagem or 'agenda' in mensagem:
@@ -94,7 +94,7 @@ def responder_ao_usuario(mensagem):
     elif 'social' in mensagem or 'instagram' in mensagem or 'twitter' in mensagem or 'rede' in mensagem:
         return '''Nos siga nas redes sociais:
             <ul style="list-style-type: none; padding: 0;">
-            <li><a href="https://x.com/FURIA" target="_blank" class="link-chat">🐦 Twitter</a></li>
+            <li><a href="https://x.com/FURIA" target="_blank" class="link-chat">✖️ Twitter</a></li>
             <li><a href="https://www.instagram.com/furiagg/" target="_blank" class="link-chat">📸 Instagram</a></li>
             </ul>
             '''
