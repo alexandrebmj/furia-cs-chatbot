@@ -20,7 +20,10 @@
     <script>
         function appendUserMessage(message) {
             const chatBox = document.getElementById('chat-box');
-            chatBox.innerHTML += `<div class="user-message">Você: ${message}</div>`;
+            const userMsgDiv = document.createElement('div');
+            userMsgDiv.classList.add('user-message');
+            userMsgDiv.textContent = `Você: ${message}`;
+            chatBox.appendChild(userMsgDiv);
         }
         function appendBotMessage(message) {
             const chatBox = document.getElementById('chat-box');

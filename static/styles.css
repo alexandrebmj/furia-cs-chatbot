@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100dvh;
     text-align: center;
 }
 
@@ -28,6 +28,17 @@ body {
     overflow-y: auto;
     margin-bottom: 10px;
     border: 1px solid #333;
+}
+
+.user-message, .bot-message {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; transform: translateY(5px);
+    }
+    to {opacity: 1; transform: translateY(0);}
 }
 
 .user-message {
@@ -74,6 +85,10 @@ body {
     color: #fff;
 }
 
+#user-input:focus{
+    outline: 2px solid #ffd700
+}
+
 button {
     padding: 10px;
     background-color: #ffd700;
@@ -93,22 +108,23 @@ button:hover {
     margin: 0 auto 20px;
 }
 
-.containes {
-    display: flex;
-    justify-content: center;
-    margin: 0 50px;
-}
-
 .container {
     display: flex;
     justify-content: center;
+    margin: 0 15px;
+}
+
+.item {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 8px;
 }
 
 .players, .item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 3px;
+    margin: 0 5px -5px;
     background-color: #1a1919b0;
 }
 
@@ -117,12 +133,12 @@ button:hover {
 }
 
 .item p {
-    margin-top: 1px;
+    margin-top: 3px;
 }
 
 h1 {
     font-family: 'Orbitron', sans-serif;
     color: #ffd700;
-    font-size: larger;
+    font-size: large;
     text-align: center;
 }

@@ -27,27 +27,36 @@ def responder_ao_usuario(mensagem):
     if 'iniciar' in mensagem or 'comando' in mensagem:
         return '''
         <b>📋 Comandos disponíveis:</b><br>
-        ➤ <b>agenda</b> → Ver o próximo jogo da FURIA<br>
+        ➤ <b>agenda</b> → Ver os próximos jogo da FURIA<br>
         ➤ <b>resultados</b> → Resultados dos últimos jogos<br>
         ➤ <b>jogadores</b> → Ver elenco atualizado<br>
         ➤ <b>uniforme</b> → Link do novo uniforme da FURIA<br>
-        ➤ <b>social</b> → Redes sociais oficiais<br>
+        ➤ <b>redes</b> → Redes sociais oficiais da FURIA<br>
         ➤ <b>curiosidade</b> → Curiosidades sobre a FURIA
         '''
 
     elif 'proximo' in mensagem or 'próximo' in mensagem or 'agenda' in mensagem:
-        return 'A FURIA não tem confrontos marcados'
+        return '''Próximos campeonatos da FURIA:<br><br>
+        🏆 PGL Astana 2025 <br>
+        📅 10/05/25 à 18/05/25<br>
+        <br>
+        🏆 IEM Dallas 2025<br>
+        📅 19/05/25 à 25/05/25<br>
+        <br>
+        🏆 BLAST.tv Austin Major 2025<br>
+        📅 03/06/25 à 22/06/25
+        '''
 
     elif 'ultimos' in mensagem or 'últimos resultados' in mensagem or 'resultados' in mensagem:
         return '''<b>📊 Últimos Resultados:</b><br>
         ❌ contra TheMongolZ<br>
         ❌ contra Virtus.pro<br>
         ❌ contra Complexity<br>
-        ✅ contra Betclic'''
+        ✅ contra Apogee'''
 
-    elif 'roster' in mensagem or 'elenco' in mensagem or 'jogadores' in mensagem:
+    elif 'roster' in mensagem or 'elenco' in mensagem or 'jogador' in mensagem:
         return '''<b>🎮 Elenco Atual FURIA CS2:</b><br>
-        <div class="containes">
+        <div class="container">
             <div class="item"> 
                 <img src="https://img-cdn.hltv.org/playerbodyshot/U6t0j2bJDKUR3mTI8rIqv7.png?ixlib=java-2.1.0&w=400&s=b5257c378b8122f415f21985855e95ca" alt="Logo FURIA" class="players"> 
                 <p>Kscerato</p>
@@ -76,23 +85,23 @@ def responder_ao_usuario(mensagem):
 
     elif 'camisa' in mensagem or 'manto' in mensagem or 'uniforme' in mensagem:
         return '''
-<p>Já deu uma olhada no nosso novo uniforme?:</p>
-<ul style="list-style-type: none; padding: 0;">
-    <li><a href="https://www.furia.gg/produto/camiseta-furia-adidas-preta-150263" target="_blank" class="link-chat">👕 Manto</a></li>
-</ul>
-'''
+        <p>Já deu uma olhada no nosso novo uniforme?:</p>
+        <ul style="list-style-type: none; padding: 0;">
+        <li><a href="https://www.furia.gg/produto/camiseta-furia-adidas-preta-150263" target="_blank" class="link-chat">👕 Manto</a></li>
+        </ul>
+        '''
 
     elif 'social' in mensagem or 'instagram' in mensagem or 'twitter' in mensagem or 'rede' in mensagem:
-        return '''
-<p>Nos siga nas redes sociais:</p>
-<ul style="list-style-type: none; padding: 0;">
-    <li><a href="https://x.com/FURIA" target="_blank" class="link-chat">🐦 Twitter</a></li>
-    <li><a href="https://www.instagram.com/furiagg/" target="_blank" class="link-chat">📸 Instagram</a></li>
-</ul>
-'''
+        return '''Nos siga nas redes sociais:
+            <ul style="list-style-type: none; padding: 0;">
+            <li><a href="https://x.com/FURIA" target="_blank" class="link-chat">🐦 Twitter</a></li>
+            <li><a href="https://www.instagram.com/furiagg/" target="_blank" class="link-chat">📸 Instagram</a></li>
+            </ul>
+            '''
 
     elif 'curiosidade' in mensagem:
-        return '''Salve xd '''
+        return '''Um dos maiores marcos da organização foi a conquista de sua primeira participação no Major de CS:GO, 
+        o StarLadder Major Berlin 2019, onde a FURIA fez história ao chegar às semifinais, tornando-se uma das equipes mais respeitadas internacionalmente. '''
 
     else:
         return '🤖 <i>Desculpe, não entendi.</i><br>Digite <b>INICIAR</b> para ver os comandos disponíveis.'
