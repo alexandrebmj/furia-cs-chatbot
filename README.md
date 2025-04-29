@@ -31,13 +31,13 @@ Tecnologias utilizadas:
 
 ## 🚀 Funcionalidades
 
-- **/start** → Ver comandos disponíveis
-- **/proximo** → Verificar o próximo jogo da FURIA
-- **/ultimos** → Resultados dos últimos jogos
-- **/jogadores** → Elenco atualizado de CS2
-- **/frase** → Receber frases temáticas
-- **/social** → Links das redes sociais oficiais
-- **/curiosidade** → Curiosidades sobre a FURIA
+- **iniciar** → Ver comandos disponíveis
+- **agenda** → Verificar o próximo jogo da FURIA
+- **resultados** → Resultados dos últimos jogos
+- **jogadores** → Elenco atualizado de CS2
+- **uniforme** → Link do novo manto da FURIA
+- **redes** → Links das redes sociais oficiais
+- **curiosidade** → Curiosidades sobre a FURIA
 
 ---
 
@@ -66,7 +66,7 @@ cd chat-furia-cs2
 Instale as dependências (se necessário):
 
 ```bash
-pip install flask
+pip install -r requirements.txt
 ```
 
 Execute o projeto:
