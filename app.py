@@ -85,10 +85,11 @@ def responder_ao_usuario(mensagem):
 
     elif 'camisa' in mensagem or 'manto' in mensagem or 'uniforme' in mensagem:
         return '''
-        <p>Já deu uma olhada no nosso novo uniforme?:</p>
-        <ul style="list-style-type: none; padding: 0;">
-        <li><a href="https://www.furia.gg/produto/camiseta-furia-adidas-preta-150263" target="_blank" class="link-chat">👕 Manto</a></li>
-        </ul>
+        Este é o novo manto da FURIA! 🖤💛 
+<br>  
+<img src="https://furiagg.fbitsstatic.net/img/p/camiseta-furia-adidas-preta-150263/337479-1.jpg?w=1280&h=1280&v=202503281012" alt="Uniforme FURIA" style="width: 100%; border-radius: 10px; margin-top: 10px;">  
+<br>  
+<a class="link-chat" href="https://www.furia.gg/produto/camiseta-furia-adidas-preta-150263" target="_blank">👉 Comprar agora na loja oficial</a>
         '''
 
     elif 'social' in mensagem or 'instagram' in mensagem or 'twitter' in mensagem or 'rede' in mensagem:
