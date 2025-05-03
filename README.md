@@ -54,13 +54,13 @@ Tecnologias utilizadas:
 Clone o projeto:
 
 ```bash
-git clone https://github.com/alexandrebmj/chat-furia-cs2.git
+git clone https://github.com/alexandrebmj/furia-cs-chatbot.git
 ```
 
 Entre na pasta do projeto:
 
 ```bash
-cd chat-furia-cs2
+cd furia-cs-chatbot
 ```
 
 Instale as dependências (se necessário):
