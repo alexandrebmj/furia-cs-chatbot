@@ -1,4 +1,4 @@
-# 🐟🔥 Chat Oficial FURIA CS2 - Challenge #1
+# 🐈‍⬛🔥 Chat Oficial FURIA CS2 - Challenge #1
 
 ## 📑 Sumário
 
@@ -6,7 +6,7 @@
 - [🚀 Funcionalidades](#-funcionalidades)
 - [🎨 Layout](#-layout)
 - [🛠 Como rodar localmente](#-como-rodar-localmente)
-- [📹 Demonstração em Vídeo](#-demonstração-em-vídeo)
+- [📸 Demonstração](#-demonstração)
 - [📚 Estrutura de Pastas](#-estrutura-de-pastas)
 - [📢 Contato](#-contato)
 - [✨ Observações](#-observações)
@@ -83,23 +83,33 @@ http://127.0.0.1:5000/
 
 ---
 
-## 📹 Demonstração em Vídeo
+## 📸 Demonstração
 
-[Vídeo demonstrativo - Clique aqui](#)
-*(Substituir o link após gravar o vídeo)*
+Abaixo, algumas capturas de tela mostrando a interface do chat:
+
+![Tela inicial do chat](static/print1.png)
+*Página principal com comandos disponíveis.*
+
+![Interação com bot](static/print2.png)
+*Exemplo de interação com o bot sobre próximos jogos e elenco.*
 
 ---
 
 ## 📚 Estrutura de Pastas
 
 ```
-chat-furia-cs2/
-├── app.py
-├── templates/
-│   └── index.html
-├── static/
+FURIA-CS-CHATBOT/
+├── static/                # Arquivos estáticos
+│   ├── furia-logo.png
+│   ├── print1.png
+│   ├── print2.png
 │   └── styles.css
+├── templates/             # Templates HTML
+│   └── index.html
+├── .gitignore
+├── app.py                 # Arquivo principal do Flask
 ├── README.md
+└── requirements.txt
 ```
 
 ---
@@ -124,5 +134,5 @@ Este projeto está sob a licença **MIT**.
 
 ---
 
-# 🔥 Let's go, FURIA! 🔥
+# 🔥 Let's go, FURIA! 🔥🖤
 
